@@ -1,4 +1,4 @@
-# Agent Guidelines for prototype.in/mvc
+# Agent Guidelines for oryx/mvc
 
 This is a lightweight PHP MVC framework built on top of the PHP League ecosystem.
 
