@@ -10,11 +10,6 @@ use Psr\Http\Message\ResponseInterface;
 
 class HomeController extends AbstractController
 {
-    public function handle(ServerRequestInterface $request): ResponseInterface
-    {
-        return $this->index($request);
-    }
-
     public function index(ServerRequestInterface $request): ResponseInterface
     {
         $data = ['title' => 'Home', 'baseUrl' => (string) $request->getUri()];

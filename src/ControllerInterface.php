@@ -11,5 +11,4 @@ use Prototype\Mvc\View\ViewInterface;
 interface ControllerInterface
 {
     public function setView(ViewInterface $view): void;
-    public function handle(ServerRequestInterface $request): ResponseInterface;
 }

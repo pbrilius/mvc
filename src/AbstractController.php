@@ -8,7 +8,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Prototype\Mvc\View\ViewInterface;
 
-abstract class AbstractController implements ControllerInterface
+class AbstractController implements ControllerInterface
 {
     protected ViewInterface $view;
 
@@ -16,8 +16,6 @@ abstract class AbstractController implements ControllerInterface
     {
         $this->view = $view;
     }
-
-    abstract public function handle(ServerRequestInterface $request): ResponseInterface;
 
     protected function render(string $template, array $data = []): ResponseInterface
     {
