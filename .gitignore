@@ -12,4 +12,3 @@ composer.lock
 # OC
 .github/
 server.log
-AGENTS.md

@@ -1,6 +1,6 @@
-# Prototype MVC
+# Oryx MVC
 
-Lightweight MVC framework built on top of PHP League packages.
+Lightweight MVC framework for rapid prototyping - A librarian package built on PHP League ecosystem.
 
 ## Requirements
 
