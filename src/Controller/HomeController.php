@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Prototype\Mvc\Controller;
 
 use Prototype\Mvc\AbstractController;
-use Prototype\Mvc\Presenter\PresenterInterface;
-use Prototype\Mvc\View\ViewInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
