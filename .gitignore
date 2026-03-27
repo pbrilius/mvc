@@ -6,5 +6,10 @@
 .phpunit.result.cache
 .phpunit.cache/
 
+# Committee hacker!
+composer.lock
+
 # OC
 .github/
+server.log
+AGENTS.md

@@ -1,8 +1,22 @@
 {
-    "name": "prototype/mvc",
-    "description": "Lightweight MVP MVC framework compatible with PHP League packages",
-    "type": "project",
-    "license": "MIT",
+    "name": "oryx/mvc",
+    "description": "Lightweight MVC framework for rapid prototyping - A librarian package built on PHP League ecosystem",
+    "type": "library",
+    "license": "BSD-Source-Code",
+    "keywords": ["mvc", "framework", "php", "league", "prototyping", "web", "oryx"],
+    "homepage": "https://github.com/pbrilius/mvc",
+    "support": {
+        "issues": "https://github.com/pbrilius/mvc/issues",
+        "source": "https://github.com/pbrilius/mvc"
+    },
+    "authors": [
+        {
+            "name": "Oryx MVC Team",
+            "email": "team@oryx.mvc",
+            "homepage": "https://github.com/pbrilius/mvc",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "php": "^8.2",
         "psr/http-message": "^1.0|^2.0",
