@@ -5,3 +5,6 @@
 .env
 .phpunit.result.cache
 .phpunit.cache/
+
+# OC
+.github/
