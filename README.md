@@ -29,9 +29,6 @@ src/
 │   └── HomeController.php     # Concrete controllers extend AbstractController
 ├── Http/
 │   └── RequestHandler.php     # Handles PSR-7 request/response operations
-├── Middleware/
-│   ├── CorsMiddleware.php
-│   └── JsonBodyParserMiddleware.php
 ├── Model/
 │   ├── AbstractModel.php      # In-memory CRUD model
 │   └── ModelInterface.php
@@ -46,7 +43,6 @@ src/
 - **Controller**: Handles HTTP requests
 - **Model**: Data layer (abstract, implement as needed)
 - **View**: Template rendering via Plates
-- **Middleware**: PSR-15 middleware components
 - **ServiceProvider**: Configures dependency injection container
 - **RequestHandler**: PSR-7 request/response handling utilities
 
@@ -149,7 +145,6 @@ use Prototype\Mvc\View\ViewInterface;
 ### Patterns
 - **Controllers**: Extend `AbstractController`, implement `ControllerInterface`. Use `render($template, $data)` or `json($data, $statusCode)`.
 - **Models**: Extend `AbstractModel`, implement `ModelInterface`. Return `null`/`false` on failure.
-- **Middleware**: Implement `Psr\Http\Server\MiddlewareInterface` with `process()`.
 - **Dependencies**: Injected via setters (e.g. `setView()`), not constructor injection.
 
 ### Configuration Files
