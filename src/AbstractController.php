@@ -7,21 +7,14 @@ namespace Prototype\Mvc;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Prototype\Mvc\View\ViewInterface;
-use Prototype\Mvc\Presenter\PresenterInterface;
 
 abstract class AbstractController implements ControllerInterface
 {
     protected ViewInterface $view;
-    protected PresenterInterface $presenter;
 
     public function setView(ViewInterface $view): void
     {
         $this->view = $view;
-    }
-
-    public function setPresenter(PresenterInterface $presenter): void
-    {
-        $this->presenter = $presenter;
     }
 
     abstract public function handle(ServerRequestInterface $request): ResponseInterface;

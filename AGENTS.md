@@ -1,6 +1,6 @@
 # Agent Guidelines for prototype.in/mvc
 
-This is a lightweight PHP MVP/MVC framework built on top of the PHP League ecosystem.
+This is a lightweight PHP MVC framework built on top of the PHP League ecosystem.
 
 ## Build / Lint / Test Commands
 
@@ -57,7 +57,7 @@ composer install
 |-----------------|------------------|---------------------------------------------|
 | Classes         | PascalCase       | `AbstractController`, `HomeController`      |
 | Interfaces      | PascalCase + I suffix | `ModelInterface`, `ViewInterface`      |
-| Abstract classes | PascalCase + Abstract prefix | `AbstractModel`, `AbstractPresenter` |
+| Abstract classes | PascalCase + Abstract prefix | `AbstractModel` |
 | Methods         | camelCase        | `findById`, `setLayout`                     |
 | Properties      | camelCase        | `$storage`, `$lastId`                       |
 | Constants       | UPPER_SNAKE_CASE |                                             |
@@ -105,10 +105,6 @@ src/
 ├── ControllerInterface.php   # Contract for controllers
 ├── Controller/
 │   └── HomeController.php     # Concrete controllers extend AbstractController
-├── Presenter/
-│   ├── AbstractPresenter.php  # Base presenter with model management
-│   ├── PresenterInterface.php
-│   └── HomePresenter.php
 ├── Model/
 │   ├── AbstractModel.php      # In-memory CRUD model
 │   └── ModelInterface.php
@@ -127,10 +123,9 @@ tests/
 
 ### Patterns
 - **Controllers**: Extend `AbstractController`, implement `ControllerInterface`. Use `render($template, $data)` or `json($data, $statusCode)`.
-- **Presenters**: Extend `AbstractPresenter`, implement `PresenterInterface`. Hold optional `ModelInterface` for data access.
 - **Models**: Extend `AbstractModel`, implement `ModelInterface`. Return `null`/`false` on failure.
 - **Middleware**: Implement `Psr\Http\Server\MiddlewareInterface` with `process()`.
-- **Dependencies**: Injected via setters (e.g. `setView()`, `setPresenter()`), not constructor injection.
+- **Dependencies**: Injected via setters (e.g. `setView()`), not constructor injection.
 
 ### Configuration Files
 | File            | Purpose                                      |

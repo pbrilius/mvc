@@ -1,6 +1,6 @@
 # Prototype MVC
 
-Lightweight MVP/MVC framework built on top of PHP League packages.
+Lightweight MVC framework built on top of PHP League packages.
 
 ## Requirements
 
@@ -35,10 +35,6 @@ src/
 ├── Model/
 │   ├── AbstractModel.php
 │   └── ModelInterface.php
-├── Presenter/
-│   ├── AbstractPresenter.php
-│   ├── HomePresenter.php
-│   └── PresenterInterface.php
 ├── ServiceProvider.php
 └── View/
     ├── PlatesView.php
@@ -47,8 +43,7 @@ src/
 
 ## Components
 
-- **Controller**: Handles HTTP requests, delegates to Presenter
-- **Presenter**: Prepares data for the View (MVP pattern)
+- **Controller**: Handles HTTP requests
 - **Model**: Data layer (abstract, implement as needed)
 - **View**: Template rendering via Plates
 
