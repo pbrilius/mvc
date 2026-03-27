@@ -1,8 +1,8 @@
 {
-    "name": "prototype/mvc",
+    "name": "committee-lan-hackeris/mvc",
     "description": "Lightweight MVP MVC framework compatible with PHP League packages",
-    "type": "project",
-    "license": "MIT",
+    "type": "library",
+    "license": "BSD-Source-Code",
     "require": {
         "php": "^8.2",
         "psr/http-message": "^1.0|^2.0",
