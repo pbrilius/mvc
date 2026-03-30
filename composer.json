@@ -23,7 +23,7 @@
         "psr/http-server-handler": "^1.0",
         "psr/http-server-middleware": "^1.0",
         "psr/container": "^1.0|^2.0",
-        "laminas/laminas-diactoros": "^2.0|^3.0",
+        "guzzlehttp/psr7": "^2.0",
         "league/route": "^5.0",
         "league/container": "^3.0|^4.0",
         "league/plates": "^3.0|^4.0"

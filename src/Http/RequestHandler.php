@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Prototype\Mvc\Http;
 
-use Laminas\Diactoros\ServerRequestFactory;
-use Laminas\Diactoros\Response;
+use GuzzleHttp\Psr7\ServerRequest;
+use GuzzleHttp\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -13,7 +13,7 @@ class RequestHandler
 {
     public static function createFromGlobals(): ServerRequestInterface
     {
-        return ServerRequestFactory::fromGlobals(
+        return ServerRequest::fromGlobals(
             $_SERVER,
             $_GET,
             $_POST,
